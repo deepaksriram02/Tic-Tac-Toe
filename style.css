@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+}
+
+.background{
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    padding-top: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar{
+    background-color: rgb(126, 80, 212);
+    text-align: center;
+    font-size: large;
+}
+
+.heading{
+    font-size: 2e m;
+    color: rgb(84, 206, 60);
+
+}
+
+.display-info{
+    color:rgb(62, 19, 141);
+    font-size: 1.5em;
+}
+
+.board{
+    display:grid;
+    grid-template-columns: repeat(3, 10vh);
+    grid-template-rows: repeat(3, 10vh);
+    position: relative;
+
+}
+
+.tile{
+    /* background-color: wheat; */
+    border: solid rgb(62, 19, 141);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color:rgb(62, 19, 141);
+    cursor: pointer;
+}
+
+/* remove border */
+.rbd-bottom{
+    border-bottom: none;
+}
+.rbd-top{
+    border-top: none;
+}
+.rbd-left{
+    border-left: none;
+}
+.rbd-right{
+    border-right: none;
+}
+.onMe{
+    color: rgb(179, 165, 165);
+}
+
+#reset-btn{
+    background-color: black;
+    color:white;
+    width: 5%;
+    height: 5%;
+}
+
+/* 13% 48% 82% */
+.winning-line{
+    background-color:black;
+    position:absolute;
+    transition: width 1s;
+    border-radius:20%;
+}
+#ltor{
+    height:1vh;
+}
+#ttob{
+    width:1vh;
+    transition: height 1s;
+}
+#diag1{
+    height: 1vh;
+    transform-origin: left;
+    transform: rotate(45deg);
+}
+#diag2{
+    right:0;
+    height: 1vh;
+    transform-origin: right;
+    transform: rotate(-45deg);
+}
